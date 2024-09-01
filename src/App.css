@@ -1,0 +1,201 @@
+.App{
+    height: 100vh;
+    background-color: #020230;
+    color: white;
+    display: flex;
+    overflow: hidden;
+}
+.main{
+    width: 75%;
+    background:linear-gradient(to bottom,rgba(0,0,0,0),#020230),url("./assets/back.jpg") center;
+}
+.pyramid{
+    width: 25%;
+    height: 100%;
+    margin-top:7%;
+    margin-right: 5%;
+}
+.moneylist{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+   
+}
+.moneylistitem{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+    
+}
+.moneylistitem.active{
+    background-color: teal;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+.moneylistitemnumber{
+    font-size: 1rem;
+    opacity: .7;
+    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.top{
+    height: 50%;
+    position: relative;
+}
+.timer{
+    height: 30px;
+    width: 30px;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#100241,black);
+    position: absolute;
+    bottom: 10px;
+    left: 18px;
+}
+
+.bottom{
+    
+   
+}
+
+.trivia{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.question{
+    width: 80%;
+    border: 2px solid white;
+    background: linear-gradient(#100241,black);
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+.answers{
+    width: 80%;
+    margin-top: 20%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.answer{
+   width: 40%;
+   text-align: center;
+   background: linear-gradient(#0e0124,#22074d);
+   border: 2px solid white;
+   border-radius: 7px;
+   padding: 4px;
+   cursor: pointer;
+   margin: 0 10px 20px 10px;
+}
+.answer.active,
+.answer:hover{
+    background: mediumblue;
+}
+.endtext{
+    position: relative;
+    margin: auto;
+    
+}
+.answer.correct{
+    animation: correct 3s ease forwards;
+
+}
+@keyframes correct{
+    0%,22%,42%{
+        background: mediumblue;
+    }
+    20%,40%,60%
+{
+    background: linear-gradient(#0e0124,#22074d);
+}
+   62%,100%{
+    background: green;
+   }
+
+}
+.answer.wrong{
+    animation: wrong 3s ease forwards;
+}
+@keyframes wrong{
+    0%,22%,42%{
+        background: mediumblue;
+    }
+    20%,40%,60%
+{
+    background: linear-gradient(#0e0124,#22074d);
+}
+   62%,100%{
+    background:red;
+   }
+   
+}
+
+.moneylistitemamount{
+    font-size: 1.2rem;
+}
+.startHeading {
+    font-size: 2rem;
+    color: #3498db; /* Heading text color */
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin */
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+}
+.backgroundImage{
+    background: url('./assets/frontimage.jpg');
+    
+
+}
+.startInput {
+    border: 2px solid #3498db; /* Add a border */
+    width: 200px; /* Adjust width */
+    padding: 10px; /* Add padding */
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    outline: none;
+    transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+.startInput:focus {
+    border-color: #2ecc71; /* Change border color on focus */
+}
+
+.startbutton {
+    width: 120px; /* Adjust width */
+    padding: 10px; /* Add padding */
+    font-size: 18px;
+    background-color: #2ecc71; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.startbutton:hover {
+    background-color: #27ae60; /* Change button background color on hover */
+}
